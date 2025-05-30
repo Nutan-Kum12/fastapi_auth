@@ -3,11 +3,12 @@ from jose import jwt, JWTError
 from datetime import datetime, timedelta
 from dotenv import load_dotenv
 import os
+
 load_dotenv()
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
-SECRET_KEY = os.getenv("your_secret_key")
+SECRET_KEY = os.getenv("SECRET_KEY","fallback-secret")
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
