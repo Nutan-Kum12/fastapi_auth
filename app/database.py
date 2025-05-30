@@ -8,3 +8,5 @@ MONGO_URL = os.getenv("MONGO_URL")  # e.g. mongodb+srv://username:password@clust
 client = AsyncIOMotorClient(MONGO_URL)
 db = client["auth_db"]
 user_collection = db["users"]
+
+
